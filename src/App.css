@@ -1,12 +1,28 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navtext {
+  color: red !important;
+  margin: 0vw 2vw;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navtext:hover {
+  color: gold !important;
+  text-decoration: none;
+}
 
-
-.navtext{
-  color: red!important;
+#navtextid {
+  color: red !important;
+  width: 10vw;
 }
 
 .coloring {
   color: black;
 }
 .verhoger {
-  height: 70vh;
+  height: 70vmax;
+  padding: 90px 30px 300px 30px;
 }

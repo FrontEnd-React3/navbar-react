@@ -5,8 +5,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Blog from "./blog";
 import About from "./about";
 import Content from "./content";
-import {Link} from 'react-scroll'
-
+import { Link } from "react-scroll";
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>
           <Nav>
-            <NavDropdown className="navtext" title="Products">
+            <NavDropdown className="navtext" id="navtextid" title="Products">
               <NavDropdown.Item className="navtext" href="#products/tea">
                 Tea
               </NavDropdown.Item>
@@ -40,21 +39,36 @@ function App() {
                 Promo
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link className="navtext" href="#blog">
+            <Link
+              smooth={true}
+              duration={1000}
+              className="flex navtext"
+              to="blog"
+            >
               Blog
-            </Nav.Link>
-            <Nav.Link className="navtext" href="#about-us">
+            </Link>
+            <Link
+              smooth={true}
+              duration={1000}
+              className="flex navtext"
+              to="about-us"
+            >
               About Us
-            </Nav.Link>
-            <Nav.Link className="navtext" href="#contact-us">
+            </Link>
+            <Link
+              smooth={true}
+              duration={1000}
+              className="flex navtext"
+              to="contact-us"
+            >
               Contact Us
-            </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       <div className="content">
-        <Blog/> <br />
-        <About/> <br />
+        <Blog /> <br />
+        <About /> <br />
         <Content />
       </div>
     </div>
